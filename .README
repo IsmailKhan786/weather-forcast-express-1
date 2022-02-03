@@ -1,0 +1,28 @@
+This is weatherForcast using node.js,express.js and with help of api 
+
+Steps:
+prerequisite: node.js 
+
+1.create folder named anything  cd folder 
+
+2.initialise npm using  npm init 
+  install express   using  npm install express 
+  install bodyparser using   npm install body-parser 
+
+3.create file app.js and require body parser,https,express 
+
+4.Note:For using css and images we have to create folder named public and inside that 
+  we have to use it
+
+5.create server using app.listen  
+  embed html file using  app.get 
+  create form in html to get user input ie city name ,etc 
+  set the action to home route  and method to post 
+6.in js app.post()  importing body parser that help to get user inputs and perfrom operations on it 
+
+Go to openWeather  create api and select the weather data paste in url we get the json format we will use this to acces the data 
+
+
+7.using https we make request to server that has data we take from it and display the user 
+
+8.add procfile so hosted platform understand 

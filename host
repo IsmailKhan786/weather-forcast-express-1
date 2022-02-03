@@ -1,0 +1,57 @@
+heroku  
+documentation 
+download comand line interface 
+
+heroku  login  
+email pw  
+
+version check  
+heroku --version 
+
+git --version 
+node --version 
+
+prepare app  on app 
+
+port 3000 we want that host to give theri port 
+
+process.env.PORT  dynamic  
+for our system + heroku  
+process.env.PORT || 3000 
+
+procfile     web:node index.js 
+create Procfile  inside that write  web: node app.js 
+
+save work to git  
+be in same folder 
+
+git init initialise brand new repositary 
+git add . 
+
+git commit -m "first commit" 
+
+deploy app -  
+logged in to herko 
+
+heroku create 
+
+new server has been created  
+we can click and can see  
+
+git push heroku master 
+
+application error - give few minutes
+
+to add styling to the data we get from api 
+
+we have to pass html file instead of res.write() 
+https://codeforgeek.com/render-html-file-expressjs/ 
+
+In the code shown above, we render static HTML files. However, there are scenarios where we need to render dynamic HTML templates. Before you get confused between static and dynamic templates, let me explain a difference quickly.
+
+In static templates, we cannot pass custom variables and customize the template based on our needs. In dynamic templates, we can pass dynamic variables and render HTML files with different values.
+
+Let’s build a simple project to understand the templating in Express. I am going to use pug templating engine which is very popular and recommended by Express as well. We use Pug for this website as well, in fact, this page is rendered using Pug templates.  
+
+1. Return HTML file from express
+2. Express template engine
