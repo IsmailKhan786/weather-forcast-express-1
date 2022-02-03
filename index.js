@@ -42,7 +42,7 @@ app.post("/",function(req,res){
             const imageUrl = "http://openweathermap.org/img/wn/" +  icon +  "@2x.png";
             //to display multiple 
             const temp2 = weatherData.main.temp;
-            res.write("The temprature in "+ querry + " is " + temp + " Celcius</h1>");
+            res.write("<h1>The temprature in "+ querry + " is " + temp + " Celcius</h1>");
             res.write("<h2>The weather descirption " + querry + "is" + weatherDescription + "</h2>")
             res.write("<img src =" + imageUrl + ">");
             // res.send("The temprature in London is " + temp)
