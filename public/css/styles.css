@@ -15,6 +15,20 @@ body{
     body{
     margin-left:500px;
     }
+    
+.form-control{
+    width:30%;
+    margin:10px 3px;
+}
+body{
+    width: 40%;
+    padding-right:10px;
+    margin-top:200px;
+}
+.btn{
+    padding:5px;
+
+}
 }
 h1{
     font-size: 1rem;
@@ -24,6 +38,7 @@ h1{
 .btn{
     padding-left: 30px;
     padding-right: 30px;
+
     
 }
 .btn:hover{
@@ -31,4 +46,8 @@ h1{
 }
 label{
     font-family: cursive;
+}
+
+#footer{
+    margin-top:50px;
 }
