@@ -1,6 +1,6 @@
 body{
     background-image: url("../images/home.jpg");
-    background-size: cover;
+       background-size: cover;
     background-repeat: no-repeat;
     padding-bottom:20px;
 
@@ -10,7 +10,15 @@ body{
     margin:0 auto 0 auto;
   
 }
-
+@media (max-width:600px) {
+    body{
+        padding-bottom:400px;
+        padding-top:200px;
+    }
+    #footer{
+        padding-top:60px;
+    }
+}
 @media (min-width:900px) {
     body{
     margin-left:500px;
