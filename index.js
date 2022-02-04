@@ -5,6 +5,7 @@ const https = require("https");
 
 const bodyParser = require("body-parser");
 const { response } = require("express");
+const { resourceLimits } = require("worker_threads");
 
 
 //use express 
@@ -36,16 +37,31 @@ app.post("/",function(req,res){
             //to display one particular peice 
             const temp = weatherData.main.temp;
             const weatherDescription = weatherData.weather[0].description;
-     
+            const feelsLike = weatherData.main.feels_like;
+            const minTemp = weatherData.main.temp_min;
+            const maxTemp = weatherData.main.temp_max;
+            const pressure = weatherData.main.pressure;
+            const humidity = weatherData.main.humidity;
+         
+            
             //10
             const icon = weatherData.weather[0].icon;
-            const imageUrl = "http://openweathermap.org/img/wn/" +  icon +  "@2x.png";
+            const imageUrl = "http://openweathermap.org/img/wn/" +  icon +  "@4x.png";
             //to display multiple 
             const temp2 = weatherData.main.temp;
-            res.write("<style></style>")
-            res.write("<h1>The temprature in "+ querry + " is " + temp + " Celcius</h1>");
-            res.write("<h2>The weather descirption in  " + querry + " is " + weatherDescription + "</h2>")
+            res.write("<style>body{background-color:slategrey; width:60%; margin:0 auto 0 auto; padding-top:100px; color:white; font-family:cursive;} img{margin-left:100px;} h1{position:relative; bottom:30px;}h2{padding-left:30px;} p{color:black; padding-top:40px;}</style>")
             res.write("<img src =" + imageUrl + ">");
+            res.write("<h1>Weather Forcast for " + querry + " is :</h1>")
+            res.write("<h2>Temprature :"+ temp + " Celcius</h2>");
+            res.write("<h2>Descirption :  "  + weatherDescription + "</h2>")
+            res.write("<h2>Feels Like : " + feelsLike + "</h2>")
+            res.write("<h2>Min Temp : " + minTemp + "Celcuis </h2>")
+            res.write("<h2>Max Temp : " + maxTemp + "</h2>")
+            res.write("<h2>Pressure : " + pressure + "</h2>")
+            res.write("<h2> Humidity : " + humidity + "</h2>")
+            res.write("<p>Copyright &copy BismeTech | Ismail Khan")
+        
+         
             // res.send("The temprature in London is " + temp)
             res.send()
         })
