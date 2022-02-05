@@ -7,9 +7,11 @@ const bodyParser = require("body-parser");
 const { response } = require("express");
 const { resourceLimits } = require("worker_threads");
 
+var temp = "";
 
 //use express 
 const app = express();
+
 
 //use bodyparser 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -19,7 +21,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 //req is request and  res is respond
  app.get("/",function(req,res){
     //open port 3000 and check and come back to terminal we see request made 
-     res.sendFile(__dirname + "/index.html")
+     res.sendFile(__dirname + "/index.html");
+
+
  })
 
  app.use(express.static("public"))
@@ -35,7 +39,7 @@ app.post("/",function(req,res){
             //variable to convert the api data of hexa to json object
             const weatherData = JSON.parse(data);
             //to display one particular peice 
-            const temp = weatherData.main.temp;
+            var temp = weatherData.main.temp;
             const weatherDescription = weatherData.weather[0].description;
             const feelsLike = weatherData.main.feels_like;
             const minTemp = weatherData.main.temp_min;
@@ -50,29 +54,31 @@ app.post("/",function(req,res){
             const imageUrl = "http://openweathermap.org/img/wn/" +  icon +  "@4x.png";
             //to display multiple 
             const temp2 = weatherData.main.temp;
+         
             res.write("<style>body{background-color:slategrey; width:60%; margin:0 auto 0 auto; padding-top:100px; color:white; font-family:cursive;} img{margin-left:100px;} h1{position:relative; bottom:30px;}h2{padding-left:30px;} p{color:black; padding-top:40px;}</style>")
             res.write("<img src =" + imageUrl + ">");
             res.write("<h1>Weather Forcast for " + querry + " is :</h1>")
-            res.write("<h2>Temprature :"+ temp + "&deg  &#8451;</h2>");
+           res.write("<h2>Temprature :"+ temp + "&deg  &#8451;</h2>");
             res.write("<h2>Descirption :  "  + weatherDescription + "</h2>")
             res.write("<h2>Feels Like : " + feelsLike + "&deg  &#8451; </h2>")
             res.write("<h2>Min Temp : " + minTemp + "&deg  &#8451;</h2>")
             res.write("<h2>Max Temp : " + maxTemp + "&deg &#8451;</h2>")
             res.write("<h2>Pressure : " + pressure + "</h2>")
             res.write("<h2> Humidity : " + humidity + "% </h2>")
+           
+            
         
             
             res.write("<p>Copyright &copy BismeTech | Ismail Khan")
         
          
-            // res.send("The temprature in London is " + temp)
-            res.send()
-        })
-    
-    
-    })
+            // res.send("The temprature in London is " + temp
+           
+            
     
 })
+    }) })
+   
 
 //create server Note:we used  process.env.PORT  this can help to run with hosted port instead of local 
 app.listen(process.env.PORT || 3000,function(){

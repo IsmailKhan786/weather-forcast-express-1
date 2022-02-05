@@ -4,7 +4,7 @@ body{
     background-repeat: no-repeat;
     padding-bottom:20px;
 
-    font-family: 'Times New Roman', Times, serif;
+    
     color:white;
     width:70%;
     margin:0 auto 0 auto;
@@ -14,10 +14,12 @@ body{
     body{
         padding-bottom:400px;
         padding-top:200px;
+        font-family: 'Times New Roman', Times, serif;
     }
     #footer{
         padding-top:60px;
     }
+   
 }
 @media (min-width:900px) {
     body{
