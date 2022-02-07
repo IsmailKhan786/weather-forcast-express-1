@@ -1,63 +1,137 @@
-body{
+body {
     background-image: url("../images/home.jpg");
-       background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom:20px;
+    padding-bottom: 20px;
 
-    
-    color:white;
-    width:70%;
-    margin:0 auto 0 auto;
-  
+
+    color: white;
+    width: 90%;
+    margin: 0 auto 0 auto;
+
 }
+
 @media (max-width:600px) {
-    body{
-        padding-bottom:400px;
-        padding-top:200px;
+    body {
+        padding-bottom: 400px;
+        padding-top: 100px;
         font-family: 'Times New Roman', Times, serif;
     }
-    #footer{
-        padding-top:60px;
+
+    .form-control {
+        width: 60%;
+        margin: 10px 3px;
+    }
+
+    .move-left {
+        position: relative;
+        left: 30px;
+    }
+
+    #footer {
+        padding-top: 60px;
+    }
+
+    h2 {
+        font-size: larger;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        color:silver;
     }
    
+    .col {
+        position: relative;
+        left: 30px;
+    }
 }
+
 @media (min-width:900px) {
-    body{
-    margin-left:500px;
+    body {
+        margin-left: 400px;
+    }
+
+    .form-control {
+        width: 80%;
+        margin: 10px 3px;
+    }
+
+    body {
+        width: 40%;
+        padding-right: 10px;
+        margin-top: 150px;
+    }
+
+    .btn {
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    .descrip {
+        position: relative;
+        left: 40px;
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    img {
+        position: relative;
+        bottom: 20px;
     }
     
-.form-control{
-    width:30%;
-    margin:10px 3px;
-}
-body{
-    width: 40%;
-    padding-right:10px;
-    margin-top:200px;
-}
-.btn{
-    padding:5px;
-
-}
-}
-h1{
-    font-size: 1rem;
-    margin-top:20px;
 }
 
-.btn{
+h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    width: 90%;
+}
+
+
+.btn {
     padding-left: 30px;
     padding-right: 30px;
 
-    
+
 }
-.btn:hover{
-    background-color:turquoise;
+
+.btn:hover {
+    background-color: turquoise;
 }
-label{
+
+label {
     font-family: cursive;
 }
 
-#footer{
-    margin-top:50px;
+#footer {
+    margin-top: 50px;
 }
+.country{
+    color:yellow;
+    font-size:3rem;
+}
+footer{
+    font-size: 1.3rem;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    padding: 50px;
+    
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  img:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.9); 
+  }

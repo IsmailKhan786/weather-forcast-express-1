@@ -1,0 +1,49 @@
+<%- include("header") -%>
+
+<header>
+    <h1>Welcome To bismeTech Weather Forcast</h1>
+    <nav>
+    <h2 class = "header">Predict Before you Go on Trip!</h2> </nav>
+</header>
+
+<main>
+    <section>
+        <div class="row">
+            <div class="col-sm-12  col-lg-6 ">
+                <form action="/" method="post">
+                    <div class="form-group">
+                        <label for="cityName">Enter:</label>
+                        <input type="text" name="cityName" class="form-control" placeholder="London">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Data</button>
+                </form>
+            </div>
+
+            <div class="col-sm-12  col-lg-6 ">
+                <img src="<%= imageUrl %>">
+            </div>
+
+        </div>
+        <% var querry = querry.
+        <h2 Class="descrip">Weather Forcast for <span class ="country"><%= querry %> </span>is: </h2>
+        <div class="row">
+
+            <div class="col-sm-12 col-lg-6  move-left">
+
+                <h2>Temprature :<%= temp %> &#8451;</h2>
+                <h2>Descirption :<%=weatherDescription%> </h2>
+                <h2>Feels Like :<%=  feelsLike %> &#8451; </h2>
+
+            </div>
+
+            <div class="col-sm-12 col-lg-6  move-left">
+                <h2>Min Temp : <%= minTemp %> &#8451;</h2>
+                <h2>Max Temp : <%= maxTemp %> &#8451;</h2>
+                <h2>Pressure : <%= pressure %> </h2>
+                <h2> Humidity : <%= humidity  %> </h2>
+            </div>
+        </div>
+
+    </section>
+</main>
+<%-include("footer")-%>
